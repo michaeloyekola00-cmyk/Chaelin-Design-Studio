@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start a Project — Contact Chaelin Design Studio</title>
+    <meta name="description"
+        content="Ready to build a brand that means something? Tell us about your business. We respond to every enquiry within 24 hours.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .form-label span {
+            color: var(--accent-color);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--surface-hover);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background-color: var(--bg-color);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-details {
+            background-color: var(--surface-color);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            height: 100%;
+        }
+
+        .contact-item {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: var(--text-primary);
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: var(--text-secondary);
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+    <script src="components.js" defer></script>
+</head>
+
+<body>
+
+    <site-header></site-header>
+
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="section fade-up" style="padding-top: 140px; padding-bottom: var(--spacing-md);">
+            <div class="container text-center" style="max-width: 800px;">
+                <h1 class="hero-title">Let's talk about your brand.</h1>
+                <p class="body-large" style="margin: var(--spacing-sm) auto 0 auto;">
+                    Tell us about your business and what you are looking to build. We respond to every enquiry within 24
+                    hours.
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Contact Layout -->
+        <section class="section">
+            <div class="container fade-up">
+                <div class="grid-2" style="grid-template-columns: 3fr 2fr; align-items: flex-start;">
+
+                    <!-- Contact Form -->
+                    <div class="card" style="padding: var(--spacing-lg);">
+                        <form id="contactForm"
+                            onsubmit="event.preventDefault(); alert('Message received. We will be in touch within 24 hours.');">
+
+                            <div class="grid-2" style="gap: var(--spacing-sm); margin-bottom: 0;">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Your name <span>*</span></label>
+                                    <input type="text" id="name" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Your email address <span>*</span></label>
+                                    <input type="email" id="email" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="business">Business name <span>*</span></label>
+                                <input type="text" id="business" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="website">Website (if you have one)</label>
+                                <input type="url" id="website" class="form-input" placeholder="https://">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="service">What are you looking for? <span>*</span></label>
+                                <select id="service" class="form-select" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Brand Identity">Brand Identity</option>
+                                    <option value="Graphic Design Retainer">Graphic Design Retainer</option>
+                                    <option value="Website Design & Build">Website Design & Build</option>
+                                    <option value="Brand Identity + Website (Full Brand)">Brand Identity + Website (Full
+                                        Brand)</option>
+                                    <option value="I am interested in a Founding Client spot">I am interested in a
+                                        Founding Client spot</option>
+                                    <option value="Not sure yet — I would like to talk">Not sure yet — I would like to
+                                        talk</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="project">Tell us about your project
+                                    <span>*</span></label>
+                                <textarea id="project" class="form-textarea" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="source">How did you hear about us?</label>
+                                <select id="source" class="form-select">
+                                    <option value="" disabled selected>Select an option (optional)</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="LinkedIn">LinkedIn</option>
+                                    <option value="Google search">Google search</option>
+                                    <option value="Referral from someone I know">Referral from someone I know</option>
+                                    <option value="Facebook group">Facebook group</option>
+                                    <option value="Discord community">Discord community</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary"
+                                style="width: 100%; margin-top: var(--spacing-md);">Send your message →</button>
+                        </form>
+                    </div>
+
+                    <!-- Direct Contact & Discovery Call -->
+                    <div>
+                        <div class="contact-details" style="margin-bottom: var(--spacing-md);">
+                            <h3 style="margin-bottom: var(--spacing-md);">Direct Contact</h3>
+
+                            <div class="contact-item">
+                                <strong>Email</strong>
+                                <a href="mailto:hello@design.chaelinstudios.com">hello@design.chaelinstudios.com</a>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>Response Time</strong>
+                                <p>Within 24 hours on business days</p>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>Location</strong>
+                                <p>London, United Kingdom</p>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>Remote Working</strong>
+                                <p>We work with clients across the UK and internationally</p>
+                            </div>
+
+                            <div class="contact-item" style="margin-top: var(--spacing-lg);">
+                                <strong>Social</strong>
+                                <a href="#">Instagram @chaelinstudios</a><br>
+                                <a href="#">LinkedIn Chaelin Design Studio</a>
+                            </div>
+                        </div>
+
+                        <div class="card" style="background-color: var(--accent-color); color: #fff; border: none;">
+                            <h3 style="margin-bottom: var(--spacing-sm); color: #fff;">Discovery Call</h3>
+                            <p style="margin-bottom: var(--spacing-md); opacity: 0.9; font-size: 0.9375rem;">
+                                Prefer to talk first? Book a free 20-minute discovery call. No commitment. No hard sell.
+                                Just a conversation about your business and what is possible.
+                            </p>
+                            <a href="https://calendly.com/glaciaklua-chaelinstudios/30min" target="_blank" class="btn"
+                                style="background-color: #fff; color: var(--accent-color); width: 100%;">Book a
+                                Discovery Call →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <site-footer></site-footer>
+
+</body>
+
+</html>

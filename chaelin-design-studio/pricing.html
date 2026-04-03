@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Pricing — Brand Identity, Graphic Design & Websites | Chaelin</title>
+    <meta name="description"
+        content="Fixed-scope, fixed-price packages for brand identity, graphic design, and website design & build. No hidden costs. No surprises.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pricing-tier {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .pricing-tier:hover {
+            border-color: var(--text-secondary);
+        }
+
+        .pricing-tier.highlight {
+            background-color: #030406;
+            border-color: #D4AF37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+            position: relative;
+        }
+
+        .pricing-tier.highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: #D4AF37;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .tier-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: var(--spacing-sm) 0;
+            color: var(--text-primary);
+        }
+
+        .tier-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .tier-features {
+            margin: var(--spacing-md) 0;
+            flex-grow: 1;
+        }
+
+        .tier-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .tier-features li::before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: 800;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: var(--spacing-sm) 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .faq-item h4 {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+    <script src="components.js" defer></script>
+</head>
+
+<body>
+
+    <site-header></site-header>
+
+    <main>
+        <!-- Founding Client Notice -->
+        <div
+            style="background-color: var(--accent-color); color: #fff; text-align: center; padding: 1rem; margin-top: 80px;">
+            <div class="container">
+                <p style="margin-bottom: 0.5rem; font-weight: 500;">We are currently accepting founding clients at a
+                    reduced rate.</p>
+                <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">If you are interested in being one of our first 5
+                    projects, get in touch before the spots are filled.</p>
+                <a href="contact.html"
+                    style="color: #fff; font-weight: 600; text-decoration: underline; font-size: 0.875rem;">Apply for a
+                    Founding Spot →</a>
+            </div>
+        </div>
+
+        <!-- Pricing Hero Section -->
+        <section class="section fade-up" style="padding-top: var(--spacing-xl);">
+            <div class="container text-center" style="max-width: 800px;">
+                <h1 class="hero-title">Transparent pricing. No surprises.<br>Just great work.</h1>
+                <p class="body-large" style="margin: var(--spacing-md) auto 0 auto;">
+                    Every package is fixed-scope and fixed-price. You know exactly what you are getting and exactly what
+                    it costs — before we start.
+                </p>
+            </div>
+        </section>
+
+        <!-- Brand Identity Packages -->
+        <section class="section">
+            <div class="container fade-up">
+                <span class="eyebrow" style="text-align: center;">One-time project investment</span>
+                <h2 class="section-title text-center">Brand Identity</h2>
+
+                <div class="grid-3">
+                    <!-- Foundation -->
+                    <div class="pricing-tier fade-up" style="transition-delay: 0.1s;">
+                        <h3>Foundation</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">For businesses launching lean</p>
+                        <div class="tier-price"><span>From</span> £800</div>
+                        <ul class="tier-features">
+                            <li>Brand discovery session</li>
+                            <li>Logo design — primary mark</li>
+                            <li>Colour palette & Typography selection</li>
+                            <li>Basic brand guidelines (PDF)</li>
+                            <li>All file formats included</li>
+                            <li>1 round of revisions</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem;">Start with Foundation →</a>
+                    </div>
+
+                    <!-- Studio (Highlight) -->
+                    <div class="pricing-tier highlight fade-up" style="transition-delay: 0.2s;">
+                        <h3>Studio</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">For businesses ready to invest
+                            properly</p>
+                        <div class="tier-price"><span>From</span> £1,800</div>
+                        <ul class="tier-features">
+                            <li><strong>Everything in Foundation</strong></li>
+                            <li>Brand positioning strategy document</li>
+                            <li>Full logo suite — primary, secondary, favicon</li>
+                            <li>Complete colour & Typography systems</li>
+                            <li>Icon and pattern system</li>
+                            <li>Full brand guidelines document</li>
+                            <li>Brand application mockups</li>
+                            <li>2 rounds of revisions</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem; color: #D4AF37;">Start with
+                            Studio →</a>
+                    </div>
+
+                    <!-- Signature -->
+                    <div class="pricing-tier fade-up" style="transition-delay: 0.3s;">
+                        <h3>Signature</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">For complete, high-standard
+                            systems</p>
+                        <div class="tier-price"><span>From</span> £3,500</div>
+                        <ul class="tier-features">
+                            <li><strong>Everything in Studio</strong></li>
+                            <li>Extended discovery & stakeholder sessions</li>
+                            <li>Competitive & positioning analysis</li>
+                            <li>Tone of voice & messaging framework</li>
+                            <li>Full brand collateral design</li>
+                            <li>Brand video or motion guidelines</li>
+                            <li>Priority turnaround</li>
+                            <li>3 rounds of revisions</li>
+                            <li>90-day post-delivery support</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem;">Start with Signature →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Graphic Design Packages -->
+        <section class="section section-light">
+            <div class="container fade-up">
+                <span class="eyebrow" style="text-align: center;">Monthly retainer investment</span>
+                <h2 class="section-title text-center">Graphic Design</h2>
+
+                <div class="grid-3">
+                    <div class="pricing-tier fade-up"
+                        style="transition-delay: 0.1s; background-color: var(--bg-color);">
+                        <h3>Essential</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">For occasional design support</p>
+                        <div class="tier-price">£450 <span>/ month</span></div>
+                        <ul class="tier-features">
+                            <li>5 design requests per month</li>
+                            <li>48-hour turnaround per request</li>
+                            <li>Social graphics, simple collateral</li>
+                            <li>1 active request at a time</li>
+                            <li>Monthly rollover — unused hours carry over</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem;">Start with Essential →</a>
+                    </div>
+
+                    <div class="pricing-tier highlight fade-up" style="transition-delay: 0.2s;">
+                        <h3>Studio</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">For consistent design needs</p>
+                        <div class="tier-price">£900 <span>/ month</span></div>
+                        <ul class="tier-features">
+                            <li>12 design requests per month</li>
+                            <li>24-hour turnaround per request</li>
+                            <li>Social, marketing, pitch decks</li>
+                            <li>2 active requests at a time</li>
+                            <li>Monthly strategy check-in call</li>
+                            <li>Priority response within 4 hours</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem; color: #D4AF37;">Start with
+                            Studio →</a>
+                    </div>
+
+                    <div class="pricing-tier fade-up"
+                        style="transition-delay: 0.3s; background-color: var(--bg-color);">
+                        <h3>Agency</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">For businesses that run on design
+                        </p>
+                        <div class="tier-price">£1,800 <span>/ month</span></div>
+                        <ul class="tier-features">
+                            <li>Unlimited design requests</li>
+                            <li>Same-day turnaround on most requests</li>
+                            <li>Full scope — any design you need</li>
+                            <li>Dedicated designer assigned</li>
+                            <li>Weekly strategy call</li>
+                            <li>Ad creatives, complex layouts</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem;">Start with Agency →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Website Design Packages -->
+        <section class="section">
+            <div class="container fade-up">
+                <span class="eyebrow" style="text-align: center;">One-time project investment</span>
+                <h2 class="section-title text-center">Website Design & Build</h2>
+
+                <div class="grid-3">
+                    <div class="pricing-tier fade-up" style="transition-delay: 0.1s;">
+                        <h3>Launch</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">For a clean, credible web presence
+                        </p>
+                        <div class="tier-price"><span>From</span> £1,200</div>
+                        <ul class="tier-features">
+                            <li>Up to 5 pages</li>
+                            <li>Custom design aligned to your brand</li>
+                            <li>Mobile-first and fully responsive</li>
+                            <li>Contact form and basic integrations</li>
+                            <li>Basic SEO structure</li>
+                            <li>30-day post-launch support</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem;">Start with Launch →</a>
+                    </div>
+
+                    <div class="pricing-tier highlight fade-up" style="transition-delay: 0.2s;">
+                        <h3>Studio</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">For a conversion-focused site</p>
+                        <div class="tier-price"><span>From</span> £2,800</div>
+                        <ul class="tier-features">
+                            <li>Up to 10 pages</li>
+                            <li><strong>Everything in Launch</strong></li>
+                            <li>Copywriting guidance & content structuring</li>
+                            <li>Blog or resource section setup</li>
+                            <li>Google Analytics and performance setup</li>
+                            <li>Speed and core web vitals optimisation</li>
+                            <li>2 rounds of revisions</li>
+                            <li>60-day post-launch support</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem; color: #D4AF37;">Start with
+                            Studio →</a>
+                    </div>
+
+                    <div class="pricing-tier fade-up" style="transition-delay: 0.3s;">
+                        <h3>Full Brand Website</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Combining brand & website together
+                        </p>
+                        <div class="tier-price"><span>From</span> £4,500</div>
+                        <ul class="tier-features">
+                            <li><strong>Brand Identity (Studio) included</strong></li>
+                            <li><strong>Website (Studio) included</strong></li>
+                            <li>Designed as one unified system</li>
+                            <li>Significant saving versus booking separately</li>
+                            <li>Single point of contact throughout</li>
+                            <li>Priority project slot</li>
+                            <li>90-day post-launch support</li>
+                        </ul>
+                        <a href="contact.html" class="link-arrow" style="margin-top: 1rem;">Start with Full Brand →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background-color: var(--surface-color);">
+            <div class="container fade-up" style="max-width: 800px;">
+                <h2 class="section-title text-center">Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h4>Do you offer payment plans?</h4>
+                    <p style="color: var(--text-secondary);">Yes, standard projects are split into a 50% deposit and 50%
+                        upon completion. For larger packages, we can discuss multi-month payment structures.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long does a project take?</h4>
+                    <p style="color: var(--text-secondary);">Brand identities typically take 3-4 weeks. Websites take
+                        4-6 weeks. Timelines depend largely on prompt feedback and content readiness.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What do you need from me to get started?</h4>
+                    <p style="color: var(--text-secondary);">Just an understanding of your business goals! We’ll provide
+                        a discovery questionnaire to guide the rest of the information gathering.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I start with one service and add more later?</h4>
+                    <p style="color: var(--text-secondary);">Absolutely. Many clients start with Brand Identity and
+                        upgrade to add a website or a graphic design retainer down the line.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if I need something not listed here?</h4>
+                    <p style="color: var(--text-secondary);">Get in touch. We can scope custom projects tailored exactly
+                        to your unique requirements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing CTA -->
+        <section class="section">
+            <div class="container fade-up" style="text-align: center; max-width: 800px;">
+                <h2 class="hero-title">Not sure which package<br>is right for you?</h2>
+                <p class="body-large" style="margin: 0 auto var(--spacing-lg) auto;">
+                    Book a free 20-minute discovery call. We will ask the right questions and tell you honestly what you
+                    need.
+                </p>
+                <div
+                    style="display: flex; gap: var(--spacing-md); justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <a href="https://calendly.com/glaciaklua-chaelinstudios/30min" target="_blank"
+                        class="btn btn-primary">Book a Free Call →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+
+</body>
+
+</html>
